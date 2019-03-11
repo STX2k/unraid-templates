@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>cloudflare-ddns</Name>
+  <Repository>oznu/cloudflare-ddns</Repository>
+  <Registry>https://github.com/oznu/docker-cloudflare-ddns</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview>This small Alpine Linux based Docker image will allow you to use the free CloudFlare DNS Service as a Dynamic DNS Provider (DDNS).</Overview>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://www.cloudflare.com/img/cf-facebook-card.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>This small Alpine Linux based Docker image will allow you to use the free CloudFlare DNS Service as a Dynamic DNS Provider (DDNS).</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Data/>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>EMAIL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>API_KEY</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>ZONE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value><Value/>
+      <Name>SUBDOMAIN</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>PROXIED</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="eMail" Target="EMAIL" Default="" Mode="" Description="Your CloudFlare email address. Required" Type="Variable" Display="always" Required="false" Mask="false">your@mail.com</Config>
+  <Config Name="API Key" Target="API_KEY" Default="" Mode="" Description="Your CloudFlare API Key. Get it here: https://www.cloudflare.com/a/profile. Required" Type="Variable" Display="always" Required="false" Mask="false">xxxxxxxxxxxxxxx</Config>
+  <Config Name="Domain" Target="ZONE" Default="" Mode="" Description="The DNS zone that DDNS updates should be applied to. Required" Type="Variable" Display="always" Required="false" Mask="false">yourmail.net</Config>
+  <Config Name="Subdomain" Target="SUBDOMAIN" Default="" Mode="" Description="A subdomain of the ZONE to write DNS changes to. If this is not supplied the root zone will be used." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Proxyed" Target="PROXIED" Default="" Mode="" Description="Set to true to make traffic go through the CloudFlare CDN. Defaults to false" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+</Container>
