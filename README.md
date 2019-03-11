@@ -6,3 +6,4 @@ Hi. In this Repo i will push my private Unraid Docker templates. Just add this R
 # Files
 My Templates: 
  - Cloudflare-DDNS [[Thx to oznu]](https://github.com/oznu/docker-cloudflare-ddns)
+ - Pyload [[Thx to Cobraeti]](https://github.com/Cobraeti/docker-pyload)
