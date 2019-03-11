@@ -29,6 +29,16 @@ router).</Description>
         <ContainerPort>8000</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
+	  <Port>
+        <HostPort>7227</HostPort>
+        <ContainerPort>7227</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+	  <Port>
+        <HostPort>9666</HostPort>
+        <ContainerPort>9666</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
     </Publish>
   </Networking>
   <Data>
@@ -61,4 +71,6 @@ router).</Description>
   <Config Name="Config Path" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/pyload</Config>
   <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="Remote Port" Target="" Default="" Mode="tcp" Description="Port for Remote Connections" Type="Port" Display="always" Required="false" Mask="false">7227</Config>
+  <Config Name="Click'and'Load Port" Target="" Default="" Mode="tcp" Description="Port for Click'and'Load forwarding" Type="Port" Display="always" Required="false" Mask="false">9666</Config>
 </Container>
